@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Victor Souza — CV</title>
+<!-- Fallback if JavaScript is blocked -->
+<meta http-equiv="refresh" content="3; url=/cv.pdf">
+<style>
+  :root { --bg: #0e1013; --fg: #e8e6de; --muted: #8b8f98; --accent: #d99a2b; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f5f1e8; --fg: #1a1a16; --muted: #6b6b62; --accent: #b8790f; }
+  }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--muted);
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+  <p>
+    Opening CV&hellip;<br>
+    <a href="/cv.pdf">Download it directly</a> if nothing happens.
+  </p>
+
+  <!-- Cloudflare Web Analytics: this pageview is what counts the download -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "4c73d262ed754c6f8d8b02a80292d9fb"}' onload="beaconReady()"></script>
+
+  <script>
+    var done = false;
+    function go() {
+      if (done) return;
+      done = true;
+      // replace() so the back button returns to the previous page,
+      // instead of landing here and redirecting forward again.
+      location.replace('/cv.pdf');
+    }
+    // Give the beacon a moment to fire once it has loaded...
+    function beaconReady() { setTimeout(go, 300); }
+    // ...but never wait longer than this, even if the beacon is blocked.
+    setTimeout(go, 1500);
+  </script>
+</body>
+</html>
