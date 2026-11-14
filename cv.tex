@@ -1,0 +1,72 @@
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=1.5cm]{geometry}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{lmodern}
+\usepackage{enumitem,titlesec,hyperref,xcolor}
+\hypersetup{colorlinks,urlcolor=black}
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{8pt}{4pt}
+\setlist[itemize]{leftmargin=1.2em,itemsep=1pt,topsep=2pt}
+\newcommand{\job}[2]{\textbf{#1}\hfill #2\\[-2pt]}
+\begin{document}
+\begin{center}
+{\LARGE\textbf{Victor Souza} | Partner, Data}\\[3pt]
++55 16 98183-7800 \quad \href{mailto:victor.vital.souza@alumni.usp.br}{victor.vital.souza@alumni.usp.br} \quad São Paulo, SP, Brazil\\
+\href{https://linkedin.com/in/victorhugow}{linkedin.com/in/victorhugow} \quad \href{https://github.com/victorhugow}{github.com/victorhugow} \quad \href{https://victorhugow.github.io}{victorhugow.github.io}
+\end{center}
+
+\section*{Profile}
+I build and operate the data platform behind an investment manager's research: pipelines that pull Brazil's scattered public financial data --- CVM, BCB, B3, ANBIMA, trustees, rating agencies, sell-side research --- into a documented database that analysts, applications and AI agents can query directly, with no dependency on paid data vendors. On top of it, I build quantitative models (issuer ratings, inflation forecasting, fixed income pricing), the apps the team works in, and the MCP layer that connects AI agents to it all. Much of this is built with AI coding agents, mainly Claude Code. Economist by training, engineer in practice.
+
+\section*{Areas of Expertise}
+Data \& Platform Engineering -- Quantitative Finance -- Machine Learning -- AI Agents \& MCP -- Data Pipelines -- Databases \& Cloud Infrastructure -- Time Series Forecasting -- Fixed Income -- Task Automation
+
+\section*{Professional Experience}
+\job{Partner, Data --- Oby Capital}{02/2022 -- present}
+\begin{itemize}
+\item Designed and built Oby's market data catalog: 200+ automated daily routines ingesting price series, company and fund fundamentals, CRIs/CRAs/FIDCs, regulatory filings, rating agency reports, sell-side equity research, and news --- including text extraction from releases, regulations, and deeds --- replacing paid third-party data providers entirely.
+\item Structured and documented a 2TB+ cloud database (field-level documentation, mapped table relationships), making it directly queryable by analysts, managers, and AI agents for cross-referencing, reporting, and analysis.
+\item Built Oby's MCP gateway (Cloudflare, SSO + role-based access) and custom MCP servers connecting AI agents to the market and internal databases, filings, Microsoft 365 and operations workflows (e.g.\ trade pre-tickets) --- vendor-agnostic, and being extended into a governed data product for partners.
+\item Manage the company's data infrastructure (Supabase, PostgreSQL, Docker) with backups and monitoring; own deployments (GitHub Actions, Vercel, Railway) and secure access (Cloudflare Zero Trust); maintain the internal Python library that pipelines and apps depend on.
+\item Lead and built proprietary issuer rating models for corporates, financial institutions and funds, using public data sources and clustering techniques (K-Means).
+\item Lead the development of an inflation forecasting model combining machine learning (XGBoost, Random Forest) and econometric techniques (linear regression, complete subset regressions, ARIMA/SARIMA) --- established Oby as a top forecaster for IPCA/IPCA-15 prints on Bloomberg's Economist Estimates ranking.
+\item Built a fixed income pricing engine for debentures and bonds.
+\item Built and maintain an internal RAG-based knowledge wiki ingesting regulatory and pricing manuals (B3, ANBIMA), rating methodologies, and research papers --- the company's institutional knowledge repository.
+\item Built an investor portal (Next.js, React, PostgreSQL) and internal apps for macro and market research, company and FIDC analysis, and factor investing; automated back-office workflows (pre-matching, quota validation, email and WhatsApp bots).
+\end{itemize}
+\job{Risk Analyst I --- B3}{04/2021 -- 02/2022}
+\begin{itemize}
+\item Performed independent validation of modules within the CORE (Closeout Risk Evaluation) model, ensuring its accuracy and reliability in assessing B3's clearing risks.
+\item Contributed to the development of a comprehensive monitor tracking key macroeconomic indicators such as inflation, economic activity, exchange rates, external accounts, and fiscal metrics.
+\end{itemize}
+\job{Macro Research Intern --- BTG Pactual}{01/2021 -- 04/2021}
+\begin{itemize}
+\item Provided assistance in data interpretation and report writing on Trade Balance, Balance of Payments, Exchange Rate, and Politics.
+\end{itemize}
+\job{Real Estate \& Credit Intern --- Libra Crédito}{01/2020 -- 12/2020}
+\begin{itemize}
+\item Built a Shiny application and model to estimate property values for loan collateral, using web scraping to gather data from real estate websites and other sources.
+\item Automated credit analysis by streamlining data extraction from bank statements and SCR-Bacen PDFs.
+\end{itemize}
+\job{Research Assistant --- LEPES}{08/2017 -- 12/2019}
+\begin{itemize}
+\item Analyzed education, census, and crime datasets (Stata \& R) for descriptive analysis, econometric modeling, and causal inference.
+\end{itemize}
+
+\section*{Education}
+\job{BSc Economics --- University of São Paulo}{2017 -- 2021}
+Relevant Courses: Microeconomics, Macroeconomics, Econometrics, Time Series Econometrics, Applied Microeconometrics \& Causal Inference, Finance, Linear Algebra, Introduction to Machine Learning.\\
+Awards: Best Bachelor's Dissertation in Economics (2021), 1st place: ``Order flow and agricultural futures in Brazil: the live cattle case''
+
+\section*{Skills}
+\begin{itemize}
+\item \textbf{Programming Languages:} Python, R, SQL, LaTeX
+\item \textbf{Data \& Infrastructure:} Supabase, PostgreSQL, DuckDB, Linux, Docker, GitHub Actions, Cloudflare
+\item \textbf{Apps \& Visualization:} Streamlit, Next.js/React, Shiny, Plotly, Microsoft Power BI
+\item \textbf{AI:} Claude Code, MCP servers \& gateways, RAG pipelines, local LLMs (Ollama), agent-queryable data design
+\item \textbf{Soft Skills:} Hands On, Creative Problem-Solving, Fast Adaptability, Fast Learning, Analytical Thinking
+\end{itemize}
+
+\section*{Languages}
+Portuguese: Native \quad English: Advanced \quad French: Advanced (DELF B2)
+\end{document}
